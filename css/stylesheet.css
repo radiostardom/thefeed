@@ -20,7 +20,7 @@ header {
 nav {
     width: 400px;
     position: fixed;
-    top: 220px;
+    top: 500px;
     left: 25px;
     margin-left: 50px;
     text-align: center;
@@ -96,6 +96,18 @@ footer {
 
 #evil {
     background-image: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #efefef, #e0e0e0, #d1d1d1, #b0b0b0, #909090, #717171, #545454);
+}
+
+#meep {
+    width: 400px;
+    position: fixed;
+    top: 220px;
+    left: 0px;
+    margin-left: 50px;
+    text-align: center;
+    color: #4B5282;
+    background-color: rgb(249, 255, 255);
+    border-radius: 20px;
 }
 
 cursor: url('img/cursor.cur'), auto;
