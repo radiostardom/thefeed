@@ -41,7 +41,6 @@ nav h4:hover{
 main {
     width: 650px;
     margin-left: 500px;
-    
 }
 
 section{
@@ -80,7 +79,7 @@ footer {
 
     background-color: rgb(78, 186, 232);
     color: white;
-    border-radius: 5px;
+    border-radius: 100px;
     text-align: center;
     padding: 5px;
     margin-left: 45px;
@@ -109,5 +108,20 @@ footer {
     background-color: rgb(249, 255, 255);
     border-radius: 20px;
 }
+@keyframes wipe-enter {
+	0% {
+		transform: scale(0, .025);
+	}
+	50% {
+		transform: scale(1, .025);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .square-animation {
+      animation: wipe-enter 1s 1;
+    }
 
 cursor: url('img/cursor.cur'), auto;
+
+/* https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/ */
