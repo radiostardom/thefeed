@@ -4,8 +4,8 @@ body {
     max-width: 1200px;
     margin: auto;
     font-family: 'Nunito', sans-serif;
-    background: #CFFFFA;
-    background: linear-gradient(135deg, #CFFFFA, #DAAAFF);
+    background: #8fd4cd;
+    background: linear-gradient(135deg, #a8e0fe, #c4a0df);
 }
 
 header {
@@ -39,7 +39,7 @@ nav h4{
 }
 
 nav h4:hover{
-    color: #6fd251;
+    color: #9651d2;
 }
 
 main {
@@ -50,29 +50,55 @@ main {
 section{
     margin-top: 25px;
     padding: 25px;
-    /* 
-
-    border-radius: 10px;
-    background-color: #eeeeee;
-    border-bottom: 5px solid #cccccc;
-    
-    RAAAAAH*/
 
     border-radius: 10px;
     color: #303030;
     background-color:  rgb(249, 255, 255);;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
 }
 
 section img{
     border-radius: 10px;
     display: block;
     margin: auto;
+    transition: .5s;
+}
+
+section img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #7346c0;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+section img:hover::before{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #7346c0;
+}
+
+section img:hover{
+    color: #ffee10;
+    box-shadow: 0 0 20px #7346c0;
+    text-shadow: 0 0 px #7346c0;
 }
 
 section p{
     text-align: center;
     font-family: 'Nunito', sans-serif;
+}
+
+section h1{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #858484;
 }
 
 footer {
@@ -87,6 +113,7 @@ footer {
     text-align: center;
     padding: 5px;
     margin-left: 45px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 #splashgif {
@@ -98,7 +125,9 @@ footer {
 }
 
 #evil {
-    background-image: radial-gradient(circle, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #efefef, #e0e0e0, #d1d1d1, #b0b0b0, #909090, #717171, #545454);
+
+    background: rgb(255,246,250);
+    background: radial-gradient(circle, rgba(255,246,250,1) 40%, rgba(54,85,121,1) 100%);
 }
 
 #meep {
@@ -112,6 +141,7 @@ footer {
     background-color: rgb(249, 255, 255);
     border-radius: 20px;
     margin-top: 10px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
 }
 @keyframes wipe-enter {
 	0% {
@@ -130,3 +160,14 @@ footer {
 cursor: url('img/cursor.cur'), auto;
 
 /* https://coolcssanimation.com/how-to-trigger-a-css-animation-on-scroll/ */
+
+#exempt-image:hover::before {
+    transform: scale(1); 
+    box-shadow: none; 
+}
+
+#exempt-image:hover {
+    color: inherit; 
+    box-shadow: none; 
+    text-shadow: none;
+}
